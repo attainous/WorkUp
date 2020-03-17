@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>WorkUp | Friendly Reminders for Desk Workers</title>
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <h1>Welcome to WorkUp</h1>
+
+    <form id="settings">
+        <h2>Settings</h2>
+        How often do you want notifications? (in minutes) <input type='number' min=1 max=60 /><br />
+        Range of reps per exercise: <input type='number' min=1 max=100 /> to <input type='number' min=1 max=100 /><br />
+        Do you want water break notifications? <input type='checkbox' /><br /><br />
+        <input type="submit" value="Save Settings" />
+    </form>
+</body>
+
+
+</html>
