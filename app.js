@@ -13,7 +13,7 @@ var settings = {
     maxRep,
     waterBreak,
     exercises
-} = require(path.join(__dirname, './settings.json'));
+} = require(path.join(__dirname, 'settings.json'));
 
 function loadSettings() {
     document.getElementById("interval").value = settings.interval;
@@ -30,12 +30,14 @@ function saveSettings() {
     settings.waterBreak = document.getElementById("waterBreak").checked;
     settings.exercises = (document.getElementById("exercises").value).split("\n");
 
-    fs.writeFile(path.join(__dirname, "./settings.json"), JSON.stringify(settings), (err) => {
+    fs.writeFile(path.join(__dirname, "settings.json"), JSON.stringify(settings), (err) => {
         if (err) {
             console.error(err);
             return;
         };
     });
+
+    loadSettings();
 
 }
 
