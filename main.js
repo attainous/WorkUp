@@ -1,13 +1,18 @@
 const {
     app,
     BrowserWindow,
+    Menu,
+    Tray
 } = require('electron');
 const path = require('path');
 
+let win = null;
+
 function createWindow() {
 
-    const win = new BrowserWindow({
+    win = new BrowserWindow({
         resizable: false,
+        skipTaskbar: true,
         width: 550,
         height: 500,
         icon: './icon.png',
@@ -36,4 +41,22 @@ app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0) {
         createWindow()
     }
+})
+
+app.on('ready', () => {
+    tray = new Tray('./icon.png')
+    const contextMenu = Menu.buildFromTemplate([{
+        label: 'Quit',
+        type: 'normal',
+        click: function () {
+            app.isQuitting = true;
+            app.quit();
+        }
+    }])
+    tray.setToolTip('WorkUp')
+    tray.setContextMenu(contextMenu)
+
+    tray.on('click', () => {
+        win.show();
+    });
 })
