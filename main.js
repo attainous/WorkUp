@@ -19,6 +19,8 @@ function createWindow() {
 
     win.loadFile('index.html')
     win.removeMenu()
+
+    win.webContents.openDevTools()
 }
 
 app.whenReady().then(createWindow)
