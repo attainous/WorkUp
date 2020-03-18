@@ -64,4 +64,7 @@ function runWater() {
 }
 
 setInterval(runApplication, interval*60*1000);
-setInterval(runWater, 15*60*1000);
+
+if (waterBreak) {
+    setInterval(runWater, 15*60*1000);
+}
