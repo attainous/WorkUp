@@ -52,4 +52,16 @@ function runApplication() {
     });
 }
 
+function runWater() {
+
+    notifier.notify({
+        title: 'Time to WorkUp!',
+        message: `It is time to get up, and drink a glass of water`,
+        icon: './water.png',
+        appID: "WorkUp"
+    });
+
+}
+
 setInterval(runApplication, interval*60*1000);
+setInterval(runWater, 15*60*1000);
