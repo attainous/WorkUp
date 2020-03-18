@@ -4,7 +4,6 @@ const notifier = require('node-notifier');
 window.onload = function(){
     document.getElementById("save").addEventListener("click", saveSettings);
     loadSettings();
-    runApplication()
 }
 
 var settings = {
@@ -52,3 +51,5 @@ function runApplication() {
         appID: "WorkUp"
     });
 }
+
+setInterval(runApplication, interval*60*1000);

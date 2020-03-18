@@ -1,6 +1,7 @@
 const {
     app,
-    BrowserWindow
+    BrowserWindow,
+    Menu
 } = require('electron');
 const path = require('path');
 
@@ -9,7 +10,7 @@ function createWindow() {
     const win = new BrowserWindow({
         resizable: false,
         width: 550,
-        height: 600,
+        height: 500,
         icon: './icon.png',
         webPreferences: {
             nodeIntegration: true
@@ -19,7 +20,7 @@ function createWindow() {
     win.loadFile('index.html')
     win.removeMenu()
 
-    win.webContents.openDevTools()
+    //win.webContents.openDevTools()
 }
 
 app.whenReady().then(createWindow)
