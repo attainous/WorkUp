@@ -2,14 +2,13 @@ const {
     app,
     BrowserWindow
 } = require('electron');
-const notifier = require('node-notifier');
 const path = require('path');
 
 function createWindow() {
 
     const win = new BrowserWindow({
         resizable: false,
-        width: 600,
+        width: 550,
         height: 600,
         icon: './icon.png',
         webPreferences: {
@@ -20,7 +19,7 @@ function createWindow() {
     win.loadFile('index.html')
     win.removeMenu()
 
-    win.webContents.openDevTools()
+    //win.webContents.openDevTools()
 }
 
 app.whenReady().then(createWindow)
