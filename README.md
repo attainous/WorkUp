@@ -8,3 +8,7 @@ WorkUp is an Electron app that allows people who spend lots of their time at the
 - [ ] Build a release
 - [ ] Improve CSS and general appearance of the app
 - [x] Add the water notification
+
+### Credits
+* [electron](https://github.com/electron/electron)
+* [node-notifier](https://github.com/mikaelbr/node-notifier)
