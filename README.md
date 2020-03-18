@@ -12,3 +12,4 @@ WorkUp is an Electron app that allows people who spend lots of their time at the
 ### Credits
 * [electron](https://github.com/electron/electron)
 * [node-notifier](https://github.com/mikaelbr/node-notifier)
+* [electron-packager](https://github.com/electron/electron-packager)
