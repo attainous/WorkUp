@@ -12,7 +12,7 @@ var settings = {
     minRep,
     maxRep,
     waterBreak,
-    workouts
+    exercises
 } = require('./settings.json');
 
 function loadSettings() {
@@ -20,7 +20,7 @@ function loadSettings() {
     document.getElementById("minRep").value = settings.minRep;
     document.getElementById("maxRep").value = settings.maxRep;
     document.getElementById("waterBreak").checked = settings.waterBreak;
-    document.getElementById("exercises").value = workouts.join("\n");
+    document.getElementById("exercises").value = exercises.join("\n");
 }
 
 function saveSettings() {
@@ -28,6 +28,7 @@ function saveSettings() {
     settings.minRep = document.getElementById("minRep").value;
     settings.maxRep = document.getElementById("maxRep").value;
     settings.waterBreak = document.getElementById("waterBreak").checked;
+    settings.exercises = (document.getElementById("exercises").value).split("\n");
 
     fs.writeFile("./settings.json", JSON.stringify(settings), (err) => {
         if (err) {
@@ -42,11 +43,11 @@ function runApplication() {
     var max = Math.max(minRep, maxRep);
     var min = Math.min(minRep, maxRep);
     var random = Math.floor(Math.random() * (max - min + 1) + min);
-    var exerciseNumber = Math.floor(Math.random() * ((workouts.length - 1) - 0 + 1) + 0);
+    var exerciseNumber = Math.floor(Math.random() * ((exercises.length - 1) - 0 + 1) + 0);
 
     notifier.notify({
         title: 'Time to WorkUp!',
-        message: `It is time to do ${random} ${workouts[exerciseNumber]}`,
+        message: `It is time to do ${random} ${exercises[exerciseNumber]}`,
         icon: './icon.png',
         appID: "WorkUp"
     });

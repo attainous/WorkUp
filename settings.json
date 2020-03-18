@@ -1,9 +1,1 @@
-{
-    "interval": "11",
-    "minRep": "20",
-    "maxRep": "40",
-    "waterBreak": false,
-    "workouts": [
-        "squats", "push-ups", "sit-ups", "crunches"
-    ]
-}
+{"interval":"11","minRep":"20","maxRep":"40","waterBreak":false,"exercises":["squats","push-ups","sit-ups","crunches","lunges"]}
