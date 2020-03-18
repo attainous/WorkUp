@@ -5,7 +5,7 @@ WorkUp is an Electron app that allows people who spend lots of their time at the
 
 ### To-do
 - [x] Allow user to minimize to task
-- [ ] Build a release
+- [x] Build a release
 - [ ] Improve CSS and general appearance of the app
 - [x] Add the water notification
 

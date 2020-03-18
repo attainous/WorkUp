@@ -15,7 +15,7 @@ function createWindow() {
         skipTaskbar: true,
         width: 550,
         height: 500,
-        icon: './icon.png',
+        icon: path.join(__dirname, 'icon.ico'),
         webPreferences: {
             nodeIntegration: true
         }
@@ -44,7 +44,7 @@ app.on('activate', () => {
 })
 
 app.on('ready', () => {
-    tray = new Tray('./icon.png')
+    tray = new Tray(path.join(__dirname, 'icon.ico'));
     const contextMenu = Menu.buildFromTemplate([{
         label: 'Quit',
         type: 'normal',
