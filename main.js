@@ -13,7 +13,7 @@ function createWindow() {
     win = new BrowserWindow({
         resizable: false,
         skipTaskbar: true,
-        width: 550,
+        width: 450,
         height: 500,
         icon: path.join(__dirname, 'icon.ico'),
         webPreferences: {
