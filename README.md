@@ -10,10 +10,7 @@ WorkUp is an Electron app that allows people who spend lots of their time at the
 - [ ] Add the water notification
 
 ### How to Build
-1. Package the Electron files
-    `electron-packager . WorkUp --platform win32 --arch x64 --out dist/`
-2. Make the installers
-    `electron-installer-windows --src dist/WorkUp-win32-x64/ --dest dist/installers/`
+Run `npm build`
 
 ### Credits
 * [electron](https://github.com/electron/electron)
