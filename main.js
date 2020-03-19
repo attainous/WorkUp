@@ -5,6 +5,17 @@ const {
     Tray
 } = require('electron');
 const path = require('path');
+var AutoLaunch = require('auto-launch');
+var autoLauncher = new AutoLaunch({
+    name: "WorkUp"
+});
+
+autoLauncher.isEnabled().then(function(isEnabled) {
+    if (isEnabled) return;
+     autoLauncher.enable();
+  }).catch(function (err) {
+    throw err;
+  });
 
 let win = null;
 

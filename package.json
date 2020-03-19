@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build": "RMDIR /Q/S dist && electron-packager . WorkUp --platform win32 --arch x64 --out dist/ && electron-installer-windows --src dist/WorkUp-win32-x64/ --dest dist/installers/"
+    "build": "RMDIR /Q/S dist && electron-packager . WorkUp --platform win32 --arch x64 --out dist/ --icon icon.ico && electron-installer-windows --src dist/WorkUp-win32-x64/ --dest dist/installers/"
   },
   "author": "Aydin Yalcinkaya",
   "license": "ISC",
@@ -14,6 +14,7 @@
     "electron-packager": "^14.2.1"
   },
   "dependencies": {
+    "auto-launch": "^5.0.5",
     "node-notifier": "^6.0.0"
   }
 }
